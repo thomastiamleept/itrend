@@ -182,7 +182,7 @@ def kde_clustering(slope, orig_len, h=0.075, a1=.57, a2=.43, plot=False):
         sns.lineplot(x=x, y=y, color='gray', ax=ax);
         for i in minima_x:
             plt.axvline(i, 0, 1, color='red')
-        
+
     clusters = maxima_x[np.digitize(slope, minima_x) - 1]
     cluster, count = np.unique(clusters, return_counts=True)
     d = np.array([[i] for i in cluster])
